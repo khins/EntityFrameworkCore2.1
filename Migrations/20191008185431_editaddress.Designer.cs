@@ -2,27 +2,25 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DemoStarter.Migrations
 {
     [DbContext(typeof(CoffeeShopContext))]
-    partial class CoffeeShopContextModelSnapshot : ModelSnapshot
+    [Migration("20191008185431_editaddress")]
+    partial class editaddress
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846");
 
             modelBuilder.Entity("Location", b =>
                 {
                     b.Property<int>("LocationId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CloseTime");
 
@@ -35,15 +33,16 @@ namespace DemoStarter.Migrations
                     b.ToTable("Locations");
 
                     b.HasData(
-                        new { LocationId = 999, CloseTime = "4PM", OpenTime = "6AM", StreetAddress = "999 Main Street" }
+                        new { LocationId = 1, CloseTime = "4PM", OpenTime = "6AM", StreetAddress = "999 Main Street" },
+                        new { LocationId = 2, CloseTime = "4PM", OpenTime = "6AM", StreetAddress = "2 Main Street" },
+                        new { LocationId = 3, CloseTime = "4PM", OpenTime = "6AM", StreetAddress = "3 Main Street" }
                     );
                 });
 
             modelBuilder.Entity("Unit", b =>
                 {
                     b.Property<int>("UnitId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("Acquired");
 

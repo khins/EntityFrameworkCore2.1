@@ -1,0 +1,12 @@
+Entity Framework Core 2.1: What's New Playbook
+by Julie Lerman
+
+The 2.1 update to EF Core brings over 500 changes since EF Core 2.0. In this course, you’ll learn how to take full advantage of the most impactful 
+new features like view mapping, server-side GroupBy processing, seeding and more.
+
+https://app.pluralsight.com/library/courses/playbook-ef-core-2-1-whats-new/table-of-contents
+
+Seeding the Database and In-Memory Test Provider
+	Seeding Your First Row of Data
+		add-migration <<name of file>>
+	Seeding Related Data
