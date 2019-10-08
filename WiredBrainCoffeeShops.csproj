@@ -8,6 +8,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20191008184017_initalize.cs" />
     <Compile Remove="Migrations\20191008184017_initalize.Designer.cs" />
+    <Compile Remove="Migrations\20191008200417_init.cs" />
+    <Compile Remove="Migrations\20191008200417_init.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
