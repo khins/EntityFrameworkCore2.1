@@ -10,3 +10,10 @@ Seeding the Database and In-Memory Test Provider
 	Seeding Your First Row of Data
 		add-migration <<name of file>>
 	Seeding Related Data
+		in test project Microsoft.EntityFrameworkCore.InMemory is required for using UseInMemoryDatabase
+	review
+		we can use anonymous types to seed data whose business logic or database autogenerates values, and we can even seed owned types
+		The most common thing you might do with HasData is to let migrations use it to build SQL that will seed your database when you execute the migrations.
+		But because EnsureCreated will use HasData at runtime, it allows you to use it as an alternative way to seed the InMemory provider when testing.
+		 Remember that HasData is a convenience, but it's not meant to be a silver bullet for all of your seeding needs, and there is likely to still
+		 be many scenarios that seeding with straightforward EF Core code using DbSets and calling SaveChanges is still going to be a better solution
